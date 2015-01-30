@@ -13,7 +13,7 @@ class Script
   end
 
   def login
-    resp = @client.request(:v4, :login) { soap.body = { :api_token => '8281D25D-5CFE-4850-B843-4B7508D09547' }}
+    resp = @client.request(:v4, :login) { soap.body = { :api_token => 'XXX' }}
     @soap_header = { "v4:sessionHeader" => { :session_id => resp.body[:login_response][:return] }}
   end
 
